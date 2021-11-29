@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    使用spring创建对象
+        这里相当于new 了一个对象
+        hello hello = new hello();
+        id相当于变量名
+        class相当于new的对象
+        <property name="str" value="spring"/>就是相当于调用set方法,设置值value,如果没有set方法就会报错
+-->
+    <bean id="hello" class="cn.luoyvdi.pojo.hello">
+<!--        <property name="str" value="spring"/>-->
+<!--        如果使用有参构造new 对象 需要-->
+<!--        1.下标赋值-->
+<!--        <constructor-arg index="0" value="你好"/>-->
+<!--        2.根据类型赋值(不建议使用)-->
+<!--        <constructor-arg type="java.lang.String" value="你好~~~"/>-->
+<!--        3.根据name-->
+        <constructor-arg name="name" value="nihao"/>
+    </bean>
+</beans>
